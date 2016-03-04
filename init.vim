@@ -46,6 +46,8 @@ colorscheme solarized
 let $FZF_DEFAULT_COMMAND='ag -g ""'
 nnoremap <F3> :FZF<cr>
 
+nnoremap <F4> :A<cr>
+
 let NERDTreeIgnore=['\.pyc$', '\~$']
 
 let g:ycm_show_diagnostics_ui=0
