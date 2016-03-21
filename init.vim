@@ -2,8 +2,10 @@ set nocompatible
 
 set hlsearch
 set incsearch
-set ignorecase
 set smartcase
+
+set autoindent
+set nocindent
 
 syntax on
 
@@ -17,7 +19,6 @@ set softtabstop=4
 set shiftwidth=4
 
 set splitright
-set nocindent
 
 set noswapfile
 set nobackup
@@ -26,6 +27,9 @@ set nowritebackup
 set hidden
 
 set exrc
+
+au BufRead,BufNewFile *.scons set filetype=python
+au BufRead,BufNewFile SConstruct set filetype=python
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'frankier/neovim-colors-solarized-truecolor-only'
@@ -48,22 +52,24 @@ nnoremap <F3> :FZF<cr>
 
 nnoremap <F4> :A<cr>
 
-let NERDTreeIgnore=['\.pyc$', '\~$']
-
 let g:ycm_show_diagnostics_ui=0
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_confirm_extra_conf=0
 
-nnoremap <leader>g :YcmCompleter GoTo<CR>
-nnoremap <leader>v :YcmCompleter GetType<CR>
+nnoremap <C-]> :YcmCompleter GoTo<CR>
 
-nnoremap <leader>e :NERDTreeToggle<CR><Paste>
+let g:NERDTreeMapOpenInTab = "<C-T>"
+let NERDTreeIgnore=['\.pyc$', '\~$']
+
+nnoremap <F2> :NERDTreeToggle<CR><Paste>
 
 nnoremap <M-PageUp> :tabprevious<cr>
 nnoremap <M-PageDown> :tabnext<cr>
 
 nnoremap <F7> :cprevious<cr>
 nnoremap <F8> :cnext<cr>
+
+nnoremap <C-b> :make<CR>
 
 function! s:tags_sink(line)
   let parts = split(a:line, '\t\zs')
@@ -137,4 +143,6 @@ endfunction
 command! -nargs=1 -complete=tag Search call DoSearch('<args>')
 
 nnoremap <F5> :call DoSearch("\\<".expand("<cword>")."\\>")<CR><CR>:cw<CR>
+
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
