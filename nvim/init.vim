@@ -79,6 +79,9 @@ autocmd FileType qf nnoremap <buffer> <C-T> <C-W><Enter><C-W>T
 nnoremap <M-PageUp> :tabprevious<cr>
 nnoremap <M-PageDown> :tabnext<cr>
 
+nnoremap <C-Home> <Home>
+nnoremap <C-End> <End>
+
 nnoremap <F7> :cprevious<cr>
 nnoremap <F8> :cnext<cr>
 
