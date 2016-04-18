@@ -1,1 +1,2 @@
+set autoindent
 set nocindent

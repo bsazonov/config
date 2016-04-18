@@ -7,6 +7,8 @@ set smartcase
 set autoindent
 set nocindent
 
+set noexpandtab
+
 syntax on
 
 set number
