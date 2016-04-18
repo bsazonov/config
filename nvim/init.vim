@@ -73,6 +73,9 @@ endfunction
 
 nnoremap <F2> :call NTToggle()<CR>
 
+" Map Ctrl + T to open entries from quickfix in new tab
+autocmd FileType qf nnoremap <buffer> <C-T> <C-W><Enter><C-W>T
+
 nnoremap <M-PageUp> :tabprevious<cr>
 nnoremap <M-PageDown> :tabnext<cr>
 
