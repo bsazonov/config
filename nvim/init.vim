@@ -63,7 +63,15 @@ nnoremap <C-]> :YcmCompleter GoTo<CR>
 let g:NERDTreeMapOpenInTab = "<C-T>"
 let NERDTreeIgnore=['\.pyc$', '\~$']
 
-nnoremap <F2> :NERDTreeToggle<CR><Paste>
+function! NTToggle()
+  if exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+    NERDTreeToggle
+  else
+    NERDTreeFind
+  endif
+endfunction
+
+nnoremap <F2> :call NTToggle()<CR>
 
 nnoremap <M-PageUp> :tabprevious<cr>
 nnoremap <M-PageDown> :tabnext<cr>
