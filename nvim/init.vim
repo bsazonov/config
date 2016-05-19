@@ -45,6 +45,7 @@ Plug 'vim-scripts/a.vim'
 Plug 'benekastah/neomake'
 call plug#end()
 
+set termguicolors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
 colorscheme solarized
