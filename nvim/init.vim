@@ -33,17 +33,8 @@ set exrc
 au BufRead,BufNewFile *.scons set filetype=python
 au BufRead,BufNewFile SConstruct set filetype=python
 
-call plug#begin('~/.config/nvim/plugged')
-Plug 'frankier/neovim-colors-solarized-truecolor-only'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'scrooloose/nerdtree'
-Plug 'Valloric/YouCompleteMe'
-Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'camelcasemotion'
-Plug 'easymotion/vim-easymotion'
-Plug 'vim-scripts/a.vim'
-Plug 'benekastah/neomake'
-call plug#end()
+set rtp+=~/.config/nvim/vim-pathogen
+call pathogen#infect()
 
 set termguicolors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -51,7 +42,7 @@ set background=dark
 colorscheme solarized
 
 let $FZF_DEFAULT_COMMAND='ag -g ""'
-nnoremap <F3> :FZF<cr>
+nnoremap <F3> :Files<cr>
 
 nnoremap <F4> :A<cr>
 

@@ -1,0 +1,24 @@
+[submodule "nvim/vim-pathogen"]
+	path = nvim/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "nvim/bundle/nerdtree"]
+	path = nvim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "nvim/bundle/neovim-colors-solarized-truecolor-only"]
+	path = nvim/bundle/neovim-colors-solarized-truecolor-only
+	url = https://github.com/frankier/neovim-colors-solarized-truecolor-only
+[submodule "nvim/bundle/vim-cpp-enhanced-highlight"]
+	path = nvim/bundle/vim-cpp-enhanced-highlight
+	url = https://github.com/octol/vim-cpp-enhanced-highlight
+[submodule "nvim/bundle/camelcasemotion"]
+	path = nvim/bundle/camelcasemotion
+	url = https://github.com/vim-scripts/camelcasemotion.git
+[submodule "nvim/bundle/vim-easymotion"]
+	path = nvim/bundle/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
+[submodule "nvim/bundle/a.vim"]
+	path = nvim/bundle/a.vim
+	url = https://github.com/vim-scripts/a.vim
+[submodule "nvim/bundle/fzf.vim"]
+	path = nvim/bundle/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
