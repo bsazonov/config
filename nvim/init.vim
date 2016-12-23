@@ -4,13 +4,6 @@ set hlsearch
 set incsearch
 set smartcase
 
-set autoindent
-set nocindent
-
-set noexpandtab
-
-syntax on
-
 set number
 set wildmenu
 set cursorline
@@ -30,11 +23,14 @@ set hidden
 
 set exrc
 
-au BufRead,BufNewFile *.scons set filetype=python
-au BufRead,BufNewFile SConstruct set filetype=python
-
 set rtp+=~/.config/nvim/vim-pathogen
 call pathogen#infect()
+
+syntax on
+filetype plugin indent on
+
+au BufRead,BufNewFile *.scons set filetype=python
+au BufRead,BufNewFile SConstruct set filetype=python
 
 set termguicolors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
