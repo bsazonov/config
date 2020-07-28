@@ -28,3 +28,6 @@
 [submodule "nvim/bundle/vim-fugitive"]
 	path = nvim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "nvim/bundle/YouCompleteMe"]
+	path = nvim/bundle/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git
