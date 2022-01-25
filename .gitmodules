@@ -31,3 +31,6 @@
 [submodule "nvim/bundle/YouCompleteMe"]
 	path = nvim/bundle/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule "nvim/bundle/fzf"]
+	path = nvim/bundle/fzf
+	url = https://github.com/junegunn/fzf.git
